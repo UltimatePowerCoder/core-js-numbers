@@ -306,9 +306,11 @@ function getSumOfDigits(num) {
  *   16  => true
  *   15  => false
  */
-function isPowerOfTwo(/* num */) {
-  throw new Error('Not implemented');
+function isPowerOfTwo(num) {
+  if (num <= 0) return false;
+  return Math.log2(num) % 1 === 0;
 }
+// еще был такой вариант return num > 0 && (num & (num - 1)) === 0;
 
 /**
  * Returns the sine of a number.
